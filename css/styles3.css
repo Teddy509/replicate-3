@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e8e8e8 70%, #1a3a52 70%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Left Section */
+.left-section {
+    flex: 0 0 350px;
+}
+
+.left-section h1 {
+    color: #0d2847;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.requirements p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.choose-pages {
+    color: #d32f2f;
+}
+
+.choose-full {
+    color: #d32f2f;
+}
+
+.portfolio {
+    color: #d32f2f;
+}
+
+/* Right Section - Steps */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.step-box {
+    background: #3d6b8f;
+    color: white;
+    padding: 18px 25px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.step-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #ffd740;
+    font-weight: bold;
+}
+
+/* Arrow */
+.arrow {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #3d6b8f;
+}
+
+.step-box.last {
+    margin-bottom: 0;
+}
+
+.step-box.last .arrow {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .left-section {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .left-section h1 {
+        font-size: 32px;
+    }
+    
+    .requirements {
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .left-section h1 {
+        font-size: 24px;
+    }
+    
+    .requirements p {
+        font-size: 16px;
+    }
+    
+    .step-box {
+        padding: 15px 20px;
+    }
+    
+    .step-box p {
+        font-size: 14px;
+    }
+}
